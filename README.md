@@ -90,6 +90,8 @@ print_r($countries->getEu()); // all EU
 print_r($countries->toTop('GBR')->getEu()); // all EU but move GBR to top
 ```
 
+Also available are getEurope(), getNorthAmerica(), getSouthAmerica(), getAfrica(), getAsia() and getOceania().
+
 ### Get Country Name From Code
 
 ```php
