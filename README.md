@@ -11,14 +11,14 @@ A simple class for returning ISO2 and ISO3 country codes and names. Great for po
 
 ## Installation
 
-1. Install Composer (assuming you haven't already got it):
+Install Composer (assuming you haven't already got it):
 
 ```bash
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 ```
 
-2. Add IsoCountries to your composer.json file
+Add IsoCountries to your composer.json file
 
 ```json
 {
@@ -34,7 +34,7 @@ mv composer.phar /usr/local/bin/composer
 }
 ```
 
-3. Run composer install
+Run "composer install"
 
 ## Examples
 
