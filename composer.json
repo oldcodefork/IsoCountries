@@ -2,8 +2,5 @@
   "name": "brightfishsoftware/isocountries",
   "description": "IsoCountries - a simple class for managing ISO2 and ISO3 countries",
   "keywords": ["iso2", "iso3", "countries"],
-  "license": "FreeBSD",
-  "autoload": {
-    "psr-0": { "BrightfishSoftware\\": "src" }
-  }
+  "license": "FreeBSD"
 }
