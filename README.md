@@ -13,11 +13,14 @@ A simple class for returning ISO2 and ISO3 country codes and names. Great for po
 
 1. Install Composer (assuming you haven't already got it):
 
+    ```bash
     curl -sS https://getcomposer.org/installer | php
     mv composer.phar /usr/local/bin/composer
+    ```
 
 2. Add IsoCountries to your composer.json file
 
+    ```json
     {
         "repositories": [
             {
@@ -29,6 +32,7 @@ A simple class for returning ISO2 and ISO3 country codes and names. Great for po
             "brightfishsoftware/isocountries": "dev-master"
         }
     }
+    ```
 
 3. Run composer install
 
@@ -36,33 +40,41 @@ A simple class for returning ISO2 and ISO3 country codes and names. Great for po
 
 ### Get All Countries
 
+    ```php
     use BrightfishSoftware\IsoCountries;
 
     $countries = new IsoCountries;
     print_r($countries->get()); // as ISO3
     print_r($countries->get(IsoCountries::RETURN_AS_ISO2)); // as ISO2
+    ```
 
 ### Move Country To Top
 
+    ```php
     use BrightfishSoftware\IsoCountries;
 
     $countries = new IsoCountries;
     print_r($countries->toTop('GBR')->get());
+    ```
 
 ### Exclude Countries
 
+    ```php
     use BrightfishSoftware\IsoCountries;
 
     $countries = new IsoCountries;
     print_r($countries->exclude(['AFG', 'ALA', 'ALB'])->get());
+    ```
 
 ### Get All EU Member States
 
+    ```php
     use BrightfishSoftware\IsoCountries;
 
     $countries = new IsoCountries;
     print_r($countries->getEu()); // all EU
     print_r($countries->toTop('GBR')->getEu()); // all EU but move GBR to top
+    ```
 
 ## License
 
