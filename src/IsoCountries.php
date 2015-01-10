@@ -5,6 +5,8 @@ use Exception;
 /**
  * Class IsoCountries
  * Author: Ed Eliot
+ * Copyright (c) Brightfish Software/Ed Eliot
+ * License: FreeBSD (see https://github.com/BrightfishSoftware/IsoCountries/blob/master/README.md)
  */
 class IsoCountries {
 	const RETURN_AS_ISO2 = 1;
