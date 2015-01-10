@@ -26,6 +26,7 @@ Add IsoCountries to your composer.json file via Packagist:
         "brightfishsoftware/isocountries": "dev-master"
     }
 }
+```
 
 or link to the repository directly:
 
