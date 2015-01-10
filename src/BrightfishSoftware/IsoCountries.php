@@ -710,14 +710,56 @@ class IsoCountries {
      */
     public function convertIso3($code)
     {
-        static $iso3ToIso2 = null;
-        if (is_null($iso3ToIso2)) {
-            $iso3ToIso2 = array_flip($this->iso2ToIso3);
+        static $lookup = null;
+        if (is_null($lookup)) {
+            $lookup = array_flip($this->iso2ToIso3);
         }
-        if (array_key_exists($code, $iso3ToIso2)) {
-            return $iso3ToIso2[$code];
+        if (array_key_exists($code, $lookup)) {
+            return $lookup[$code];
         }
         throw new Exception(sprintf('Mapping not found for ISO3 code %s', $code));
+    }
+
+    /**
+     * @param string $code
+     * @return string
+     * @throws Exception
+     */
+    public function getName($code)
+    {
+        $iso3Code = strlen($code) === 2 ? $this->convertIso2($code) : $code;
+        if (array_key_exists($iso3Code, array_keys($this->completeIso3))) {
+            return $this->completeIso3[$iso3Code];
+        }
+        throw new Exception(sprintf('Mapping not found for ISO%d code %s', strlen($code), $code));
+    }
+
+    /**
+     * @param string $name
+     * @return string
+     * @throws Exception
+     */
+    public function getIso3Code($name)
+    {
+        static $lookup = null;
+        if (is_null($lookup)) {
+            $lookup = array_flip($this->completeIso3);
+        }
+        if (array_key_exists($name, array_keys($lookup))) {
+            return $lookup[$name];
+        }
+        throw new Exception('Mapping not found for ' . $name);
+    }
+
+    /**
+     * @param string $name
+     * @return string
+     * @throws Exception
+     */
+    public function getIso2Code($name)
+    {
+        $iso3Code = $this->getIso3Code($name);
+        return $this->convertIso3($iso3Code);
     }
 
     /**
