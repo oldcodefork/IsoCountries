@@ -573,7 +573,6 @@ class IsoCountries {
     /** @var array */
     protected $toTop = [];
 
-
     /**
      * @param string|array $exclude
      * @return $this
