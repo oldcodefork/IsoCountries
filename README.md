@@ -32,7 +32,7 @@ mv composer.phar /usr/local/bin/composer
         "brightfishsoftware/isocountries": "dev-master"
     }
 }
-    ```
+```
 
 3. Run composer install
 
