@@ -44,7 +44,7 @@ or link to the repository directly:
 }
 ```
 
-Run "composer install"
+Run "composer install".
 
 ## Examples
 
