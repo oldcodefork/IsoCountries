@@ -18,7 +18,16 @@ curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 ```
 
-Add IsoCountries to your composer.json file
+Add IsoCountries to your composer.json file via Packagist:
+
+```json
+{
+    "require": {
+        "brightfishsoftware/isocountries": "dev-master"
+    }
+}
+
+or link to the repository directly:
 
 ```json
 {
