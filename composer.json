@@ -4,6 +4,6 @@
   "keywords": ["iso2", "iso3", "countries"],
   "license": "FreeBSD",
   "autoload": {
-    "psr-0": { "BrightfishSoftware": "src/" }
+    "psr-0": { "BrightfishSoftware\\": "src" }
   }
 }
