@@ -7,7 +7,7 @@ A simple class for returning ISO2 and ISO3 country codes and names. Great for po
 * Complete ISO2/ISO3 lists with mappings to the corresponding country names
 * Get mappings for the EU, Europe, North America, South America, Africa, Asia & Oceania
 * Filter out countries you don't want
-* Move preferred countries to the top ofthe returned list
+* Move preferred countries to the top of the returned list
 
 ## Installation
 
