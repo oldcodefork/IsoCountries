@@ -41,6 +41,7 @@ A simple class for returning ISO2 and ISO3 country codes and names. Great for po
 ### Get All Countries
 
     ```php
+    <?php
     use BrightfishSoftware\IsoCountries;
 
     $countries = new IsoCountries;
@@ -51,6 +52,7 @@ A simple class for returning ISO2 and ISO3 country codes and names. Great for po
 ### Move Country To Top
 
     ```php
+    <?php
     use BrightfishSoftware\IsoCountries;
 
     $countries = new IsoCountries;
@@ -60,6 +62,7 @@ A simple class for returning ISO2 and ISO3 country codes and names. Great for po
 ### Exclude Countries
 
     ```php
+    <?php
     use BrightfishSoftware\IsoCountries;
 
     $countries = new IsoCountries;
@@ -69,6 +72,7 @@ A simple class for returning ISO2 and ISO3 country codes and names. Great for po
 ### Get All EU Member States
 
     ```php
+    <?php
     use BrightfishSoftware\IsoCountries;
 
     $countries = new IsoCountries;
