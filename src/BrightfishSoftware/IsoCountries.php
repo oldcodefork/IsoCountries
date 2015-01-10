@@ -728,7 +728,7 @@ class IsoCountries {
     public function getName($code)
     {
         $iso3Code = strlen($code) === 2 ? $this->convertIso2($code) : $code;
-        if (array_key_exists($iso3Code, array_keys($this->completeIso3))) {
+        if (array_key_exists($iso3Code, $this->completeIso3)) {
             return $this->completeIso3[$iso3Code];
         }
         throw new Exception(sprintf('Mapping not found for ISO%d code %s', strlen($code), $code));
@@ -745,7 +745,7 @@ class IsoCountries {
         if (is_null($lookup)) {
             $lookup = array_flip($this->completeIso3);
         }
-        if (array_key_exists($name, array_keys($lookup))) {
+        if (array_key_exists($name, $lookup)) {
             return $lookup[$name];
         }
         throw new Exception('Mapping not found for ' . $name);
