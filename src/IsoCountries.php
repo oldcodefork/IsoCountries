@@ -573,9 +573,6 @@ class IsoCountries {
 	/** @var array */
 	protected $toTop = [];
 
-	public function __construct() {
-
-	}
 
 	/**
 	 * @param string|array $exclude
@@ -621,7 +618,7 @@ class IsoCountries {
 	/**
 	 * @param int $as
 	 * @return array
-	 */
+     */
 	public function get($as = self::RETURN_AS_ISO3)
 	{
 		$list = empty($this->exclude) ? $this->completeIso3 : array_diff_key($this->completeIso3, $this->exclude);
@@ -698,7 +695,7 @@ class IsoCountries {
 	 * @param string $code
 	 * @return string
 	 * @throws Exception
-	 */
+     */
 	public function convertIso2($code)
 	{
 		if (array_key_exists($code, $this->iso2ToIso3)) {
@@ -711,7 +708,7 @@ class IsoCountries {
 	 * @param string $code
 	 * @return string
 	 * @throws Exception
-	 */
+     */
 	public function convertIso3($code)
 	{
 		static $iso3ToIso2 = null;
@@ -728,7 +725,7 @@ class IsoCountries {
 	 * @param array $region
 	 * @param int $as
 	 * @return array
-	 */
+     */
 	protected function getRegion(array $region, $as = self::RETURN_AS_ISO3)
 	{
 		$this->exclude = [];
