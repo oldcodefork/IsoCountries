@@ -103,7 +103,7 @@ echo $countries->getName('GBR');
 echo $countries->getName('GB');
 ```
 
-### Get Code From Name
+### Get Code From Country Name
 
 ```php
 <?php
