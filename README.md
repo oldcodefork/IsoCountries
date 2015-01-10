@@ -90,6 +90,28 @@ print_r($countries->getEu()); // all EU
 print_r($countries->toTop('GBR')->getEu()); // all EU but move GBR to top
 ```
 
+### Get Country Name From Code
+
+```
+<?php
+use BrightfishSoftware\IsoCountries;
+
+$countries = new IsoCountries;
+echo $countries->getName('GBR');
+echo $countries->getName('GB');
+```
+
+### Get Code From Name
+
+```
+<?php
+use BrightfishSoftware\IsoCountries;
+
+$countries = new IsoCountries;
+echo $countries->getIso3Code('United Kingdom');
+echo $countries->getIso2Code('United Kingdom');
+```
+
 ## License
 
 Copyright (c) 2014, Brightfish Software/Ed Eliot
