@@ -92,7 +92,7 @@ print_r($countries->toTop('GBR')->getEu()); // all EU but move GBR to top
 
 ### Get Country Name From Code
 
-```
+```php
 <?php
 use BrightfishSoftware\IsoCountries;
 
@@ -103,7 +103,7 @@ echo $countries->getName('GB');
 
 ### Get Code From Name
 
-```
+```php
 <?php
 use BrightfishSoftware\IsoCountries;
 
