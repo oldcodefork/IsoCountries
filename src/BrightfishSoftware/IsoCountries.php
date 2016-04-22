@@ -569,6 +569,11 @@ class IsoCountries {
         'TL' => 'TLS'
     ];
     /** @var array */
+    $nameVariants = [
+        'BOL' => ['Bolivia'],
+        'CPV' => ['Cape Verde'],
+    ];
+    /** @var array */
     protected $exclude = [];
     /** @var array */
     protected $toTop = [];
@@ -735,30 +740,35 @@ class IsoCountries {
     }
 
     /**
-     * @param string $name
+     * @param string $countryName
      * @return string
      * @throws Exception
      */
-    public function getIso3Code($name)
+    public function getIso3Code($countryName)
     {
-        static $lookup = null;
-        if (is_null($lookup)) {
-            $lookup = array_flip($this->completeIso3);
+        foreach ($this->completeIso3 as $code => $name) {
+            if (strtolower($countryName) === strtolower($name)) {
+                return $code;
+            }
         }
-        if (array_key_exists($name, $lookup)) {
-            return $lookup[$name];
+        foreach ($this->nameVariants as $code => $names) {
+            foreach ($names as $name) {
+                if (strtolower($countryName) === strtolower($name)) {
+                    return $code;
+                }
+            }
         }
-        throw new Exception('Mapping not found for ' . $name);
+        throw new Exception('Mapping not found for ' . $countryName);
     }
 
     /**
-     * @param string $name
+     * @param string $countryName
      * @return string
      * @throws Exception
      */
-    public function getIso2Code($name)
+    public function getIso2Code($countryName)
     {
-        $iso3Code = $this->getIso3Code($name);
+        $iso3Code = $this->getIso3Code($countryName);
         return $this->convertIso3($iso3Code);
     }
 
