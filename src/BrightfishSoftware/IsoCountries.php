@@ -576,6 +576,7 @@ class IsoCountries {
         'FSM' => ['Micronesia'],
         'PSE' => ['Palestinian Territory, Occupied'],
         'RUS' => ['Russia'],
+        'SHN' => ['Saint Helena'],
     ];
     /** @var array */
     protected $exclude = [];
