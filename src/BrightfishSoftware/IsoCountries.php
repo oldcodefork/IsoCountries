@@ -573,6 +573,7 @@ class IsoCountries {
         'BOL' => ['Bolivia'],
         'CIV' => ['Cote d\'Ivoire'],
         'CPV' => ['Cape Verde'],
+        'FSM' => ['Micronesia'],
     ];
     /** @var array */
     protected $exclude = [];
