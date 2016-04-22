@@ -569,7 +569,7 @@ class IsoCountries {
         'TL' => 'TLS'
     ];
     /** @var array */
-    $nameVariants = [
+    protected $nameVariants = [
         'BOL' => ['Bolivia'],
         'CPV' => ['Cape Verde'],
     ];
