@@ -571,6 +571,7 @@ class IsoCountries {
     /** @var array */
     protected $nameVariants = [
         'BOL' => ['Bolivia'],
+        'CIV' => ['Cote d\'Ivoire'],
         'CPV' => ['Cape Verde'],
     ];
     /** @var array */
