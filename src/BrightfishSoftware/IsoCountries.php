@@ -573,7 +573,7 @@ class IsoCountries {
     /** @var array */
     protected $toTop = [];
     /** @var array */
-    protected $iso3TitlesWithTheArticle = [
+    protected $iso3WithArticle = [
         'BHS', 'CYM', 'CAF', 'CCK', 'COM', 'CZE', 'DOM', 'FLK', 'FRO', 'GMB', 'IMN', 'MDV', 'MHL', 'NLD', 'ANT', 'PHL',
         'RUS', 'SYC', 'SLB', 'TCA', 'ARE', 'GBR', 'USA', 'UMI', 'VGB', 'VIR', 'ALA', 'COK',
     ];
@@ -802,11 +802,12 @@ class IsoCountries {
      * @return string
      * @throws Exception
      */
-    public function getNameWithArticle($code) {
+    public function getNameWithArticle($code)
+    {
         $iso3Code = strlen($code) === 2 ? $this->convertIso2($code) : $code;
         $name = $this->getName($iso3Code);
-        if (array_search($iso3Code, $this->iso3TitlesWithTheArticle, true)) {
-            $name = 'The '.$name;
+        if (array_search($iso3Code, $this->iso3WithArticle, true)) {
+            $name = 'The ' . $name;
         }
         return $name;
     }
