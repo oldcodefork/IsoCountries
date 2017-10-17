@@ -1,5 +1,5 @@
 {
-  "name": "brightfishsoftware/isocountries",
+  "name": "brightlocal/isocountries",
   "description": "IsoCountries - a simple class for managing ISO2 and ISO3 countries",
   "keywords": ["iso2", "iso3", "countries"],
   "license": "FreeBSD",
